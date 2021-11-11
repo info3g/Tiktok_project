@@ -1,0 +1,11 @@
+version: '3.8.8'
+services:
+  web:
+    build:  C:/Users/as/Desktop/apis/
+    command:  python manage.py runserver 0.0.0.0:8080
+    volumes:
+      - ./app/:/usr/src/app/
+    ports:
+      - 8080:8080
+    env_file:
+      - ./.env.dev
